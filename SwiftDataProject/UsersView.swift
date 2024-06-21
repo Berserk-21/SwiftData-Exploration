@@ -22,7 +22,7 @@ struct UsersView: View {
                     
                     Spacer()
                     
-                    Text(String(user.jobs.count))
+                    Text(String(user.unwrappedJobs.count))
                         .fontWeight(.black)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 5)
@@ -48,10 +48,10 @@ struct UsersView: View {
                 Button("Add Singer") {
                     // Adds objects related to others.
                     let user = users.first(where: { $0.name == "Ed Sheeran" })
-                    user?.jobs.append(Job(name: "Singer", priority: 0))
+                    user?.jobs?.append(Job(name: "Singer", priority: 0))
                     
                     let lennon = users.first(where: { $0.name == "John Lennon" })
-                    lennon?.jobs.append(Job(name: "Singer", priority: 0))
+                    lennon?.jobs?.append(Job(name: "Singer", priority: 0))
                 }
             }
         }
