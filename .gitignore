@@ -4,6 +4,7 @@
 
 ## User settings
 xcuserdata/
+UserInterfaceState.xcuserstate
 *.xcuserstate
 *.DS_Store
 
