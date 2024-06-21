@@ -12,7 +12,7 @@ import SwiftData
 struct SwiftDataProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentViewFilter()
         }
         .modelContainer(for: User.self)
     }

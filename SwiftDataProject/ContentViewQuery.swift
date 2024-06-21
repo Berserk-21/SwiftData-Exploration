@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct ContentViewQuery: View {
     
     @Environment(\.modelContext) var modelContext
     @Query(sort: \User.name) var users: [User]
@@ -51,5 +51,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentViewQuery()
 }
