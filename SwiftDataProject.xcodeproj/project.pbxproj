@@ -15,6 +15,7 @@
 		2C969E712C258397003E67E4 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C969E702C258397003E67E4 /* EditUserView.swift */; };
 		2C969E732C25A612003E67E4 /* ContentViewFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C969E722C25A612003E67E4 /* ContentViewFilter.swift */; };
 		2C969E752C25BBE5003E67E4 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C969E742C25BBE5003E67E4 /* UsersView.swift */; };
+		2C969E772C25C1E4003E67E4 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C969E762C25C1E4003E67E4 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2C969E702C258397003E67E4 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		2C969E722C25A612003E67E4 /* ContentViewFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewFilter.swift; sourceTree = "<group>"; };
 		2C969E742C25BBE5003E67E4 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		2C969E762C25C1E4003E67E4 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				2C969E602C258122003E67E4 /* SwiftDataProjectApp.swift */,
+				2C969E782C25C21D003E67E4 /* Models */,
 				2C969E622C258122003E67E4 /* ContentViewQuery.swift */,
 				2C969E722C25A612003E67E4 /* ContentViewFilter.swift */,
 				2C969E702C258397003E67E4 /* EditUserView.swift */,
 				2C969E742C25BBE5003E67E4 /* UsersView.swift */,
-				2C969E6E2C25830C003E67E4 /* User.swift */,
 				2C969E642C258123003E67E4 /* Assets.xcassets */,
 				2C969E662C258123003E67E4 /* Preview Content */,
 			);
@@ -77,6 +79,15 @@
 				2C969E672C258123003E67E4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C969E782C25C21D003E67E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C969E762C25C1E4003E67E4 /* Job.swift */,
+				2C969E6E2C25830C003E67E4 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 				2C969E712C258397003E67E4 /* EditUserView.swift in Sources */,
 				2C969E612C258122003E67E4 /* SwiftDataProjectApp.swift in Sources */,
 				2C969E6F2C25830C003E67E4 /* User.swift in Sources */,
+				2C969E772C25C1E4003E67E4 /* Job.swift in Sources */,
 				2C969E752C25BBE5003E67E4 /* UsersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
