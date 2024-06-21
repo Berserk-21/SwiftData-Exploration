@@ -11,23 +11,17 @@ import SwiftData
 struct ContentViewFilter: View {
     
     @Environment(\.modelContext) var modelContext
-    @Query(filter: #Predicate<User> { user in
-        if user.name.localizedStandardContains("R") {
-            if user.city == "London" {
-                return true
-            } else {
-                return false
-            }
-        } else {
-            return false
-        }
-    }, sort: \User.name) var users: [User]
+
+    @State private var showingUpcomingOnly = false
+    
+    @State private var sortOrder = [
+        SortDescriptor(\User.name),
+        SortDescriptor(\User.joinDate)
+    ]
     
     var body: some View {
         NavigationStack {
-            List(users) { user in
-                Text(user.name)
-            }
+            UsersView(minimumJoinDate: showingUpcomingOnly ? .now : .distantPast, sortOrder: sortOrder)
             .navigationTitle("Users")
             .toolbar {
                 Button("Add Samples", systemImage: "plus") {
@@ -42,6 +36,24 @@ struct ContentViewFilter: View {
                     modelContext.insert(second)
                     modelContext.insert(third)
                     modelContext.insert(fourth)
+                }
+                Button(showingUpcomingOnly ? "Show everyone" : "Show Upcoming") {
+                    showingUpcomingOnly.toggle()
+                }
+                // A good way to present sort options is to use a Menu.
+                Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                    Picker("Sort", selection: $sortOrder) {
+                        Text("Sort by Name")
+                            .tag([
+                                SortDescriptor(\User.name),
+                                SortDescriptor(\User.joinDate)
+                            ])
+                        Text("Sort by Join Date")
+                            .tag([
+                                SortDescriptor(\User.joinDate),
+                                SortDescriptor(\User.name)
+                            ])
+                    }
                 }
             }
         }
